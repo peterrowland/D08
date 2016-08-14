@@ -59,6 +59,5 @@ def get_pledge_list():
 ###############################################################################
 def main():  # DO NOT CHANGE BELOW
     print(histogram_new(get_pledge_list()))
-    print(histogram_old(get_pledge_list()))
 if __name__ == '__main__':
     main()

@@ -28,15 +28,50 @@ def invert_dict_old(d):
 
 
 def invert_dict_new(d):
-    pass
+    inverse = dict()
+    for val in d.values():
+        inverse[val] = ''
+
+    for key, val in d.items():
+
+        inverse[val] = (inverse.get(val)) + "{}, ".format(key)
+    return inverse
 
 
 def print_hist_newest(d):
-    pass
+    # for key in d.keys():              # Original
+    for i in range(1, (max(d.keys()) + 1)):  # iterate over range to highest
+        # ? why is this creating double lists if > 0 ?
+        val_list = [y.split() for x, y in d.items() if x == i]
+        # print(val_list[0])
+        print("{}: {}".format(i, val_list))
+
 
 ###############################################################################
 # INSERT COMPLETED CODE FROM HW08_ch11_ex02a BELOW: ###########################
 ###############################################################################
+
+
+def histogram_new(s):
+    d = dict()
+
+    for c in s:
+        d[c] = 0
+
+    for c in s:
+        d[c] = (d.get(c)) + 1
+
+    return d
+
+
+def get_pledge_list():
+    """ Opens pledge.txt and converts to a list, each item is a word in
+    the order it appears in the original file. returns the list.
+    """
+    with open('pledge.txt', 'r') as f:
+        pledge_list = f.read().split()
+
+    return pledge_list
 
 
 ###############################################################################

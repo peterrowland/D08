@@ -9,11 +9,25 @@
 
 
 # Body
-def store_to_dict():
-    pass
+def load_words():
+    fin = open('words.txt', 'r')
+    words = fin.readlines()
+    for i in range(len(words)):
+        words[i].strip()
 
+    return words
+
+
+def store_to_dict():
+    words = load_words()
+    d = {}
+    for word in words:
+        d[word.strip()] = ''
+    return d
 
 ###############################################################################
+
+
 def main():  # DO NOT CHANGE BELOW
     words_dict = store_to_dict()
     if "this" in words_dict:
