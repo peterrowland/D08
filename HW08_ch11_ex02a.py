@@ -38,7 +38,7 @@ def histogram_new(s):
     d = dict()
 
     for c in s:
-        d[c] = 1
+        d[c] = 0
 
     for c in s:
         d[c] = (d.get(c)) + 1

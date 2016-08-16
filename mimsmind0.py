@@ -57,14 +57,5 @@ def main():
     secret = get_secret(length)
     mimsmind0(secret, length)
 
-# display welcome message, begin game
-
-#GAME LOOP
-#try counter
-#prompt user for n-digit number.
-#display higher/low
-
-#if guess == number, present congrats message, # tries, exit().
-
 if __name__ == '__main__':
     main()

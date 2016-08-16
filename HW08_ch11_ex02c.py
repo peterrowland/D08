@@ -32,7 +32,7 @@ def reverse_lookup_new(d, v):
 
     else:
 
-        lst = [(x, y) for x, y in d.items() if y == int(v)]
+        lst = [x for x, y in d.items() if y == int(v)]
         # lst = [x for x, y in d.items() if y == v]
     return lst
 
